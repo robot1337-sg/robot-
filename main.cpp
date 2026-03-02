@@ -2,9 +2,7 @@
 #include <WiFiClientSecure.h>
 #include <UniversalTelegramBot.h>
 
-const char* ssid = "";
-const char* password = "";
-#define BOT_TOKEN ""
+
 
 WiFiClientSecure client;
 UniversalTelegramBot bot(BOT_TOKEN, client);
