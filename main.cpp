@@ -4,13 +4,15 @@
 
 const char* ssid = "ASF";
 const char* password = "12345678";
-#define BOT_TOKEN ""
+#define BOT_TOKEN "8599691946:AAGEw8Oemk4joTCStf_uvMSJib9Q7G4--0A"
 
 WiFiClientSecure client;
 UniversalTelegramBot bot(BOT_TOKEN, client);
 
 void setup() {
   Serial.begin(115200);
+  pinMode(S3, OUTPUT);
+  pinMode(S2, OUTPUT); //скорость
   pinMode(D5, OUTPUT);
   pinMode(D6, OUTPUT);
   pinMode(D7, OUTPUT);
@@ -54,6 +56,8 @@ void handleNewMessages(int numNewMessages) {
       
       digitalWrite(D7, HIGH);
       digitalWrite(D6, HIGH);
+      analogWrite(S2, 512);
+      analogWrite(S3, 512);
       delay(ti);
       digitalWrite(D7, LOW);
       digitalWrite(D6, LOW);
@@ -64,6 +68,8 @@ void handleNewMessages(int numNewMessages) {
       
       digitalWrite(D8,HIGH);
       digitalWrite(D5,HIGH);
+      analogWrite(S2, 512);
+      analogWrite(S3, 512);
       delay(ti);
       digitalWrite(D8,LOW);
       digitalWrite(D5,LOW);
@@ -74,6 +80,8 @@ void handleNewMessages(int numNewMessages) {
 
       digitalWrite(D7,HIGH);
       digitalWrite(D5,HIGH);
+      analogWrite(S2, 512);
+      analogWrite(S3, 512);
       delay(ti);
       digitalWrite(D7,LOW);
       digitalWrite(D5,LOW);
@@ -84,6 +92,8 @@ void handleNewMessages(int numNewMessages) {
 
       digitalWrite(D6,HIGH);
       digitalWrite(D8,HIGH);
+      analogWrite(S2, 512);
+      analogWrite(S3, 512); //1023
       delay(ti);
       digitalWrite(D6,LOW);
       digitalWrite(D8,LOW);
