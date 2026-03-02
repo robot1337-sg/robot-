@@ -3,8 +3,8 @@
 #include <UniversalTelegramBot.h>
 
 const char* ssid = "ASF";
-const char* password = "12345678";
-#define BOT_TOKEN "8599691946:AAGEw8Oemk4joTCStf_uvMSJib9Q7G4--0A"
+const char* password = "********";
+#define BOT_TOKEN ""
 
 WiFiClientSecure client;
 UniversalTelegramBot bot(BOT_TOKEN, client);
